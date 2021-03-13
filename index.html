@@ -18,6 +18,7 @@
     <title>Hitung pensiunan</title>
   </head>
   <body>
+    <!-- Header -->
     <section class="header">
       <img src="assets/illustration.svg" alt="hitung dana pensiun" />
       <div class="desc">
@@ -25,6 +26,8 @@
         <p>Masa tua tenang, pengeluaran tetap lancar</p>
       </div>
     </section>
+
+    <!-- SVG -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#0099ff"
@@ -33,8 +36,40 @@
       ></path>
     </svg>
 
+    <!-- Counting -->
     <section class="counting">
       <h2>Hitung dana pensiun</h2>
+      <img src="assets/9 - ECONOMY ANALYSIS 1.svg" alt="hitung dana pensiun" />
+
+      <div class="spending-input">
+        <div class="spending-now">
+          <label for="spending">Jumlah pengeluaran saat ini</label>
+          <div class="input">
+            <input
+              id="spending"
+              type="text"
+              placeholder="pengeluaran per-tahun"
+            />
+            <input type="text" placeholder="pengeluaran per-bulan" />
+          </div>
+        </div>
+        <div class="spending-pension">
+          <label for="spending">Jumlah pengeluaran saat pensiun</label>
+          <div class="input">
+            <input id="spending" type="text" placeholder="umur saat ini" />
+            <input type="text" placeholder="umur saat pensiun" />
+          </div>
+        </div>
+        <div class="inflation">
+          <div class="input-inflation">
+            <input type="text" />
+            <div class="percent">%</div>
+          </div>
+
+          <p>*inflasi tahunan (opsional)</p>
+        </div>
+        <div class="output"></div>
+      </div>
     </section>
   </body>
 </html>

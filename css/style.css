@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppins;
+  font-style: normal;
 }
 
 body {
-  font-family: Poppins;
-  font-style: normal;
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
 }
@@ -46,12 +46,74 @@ svg {
 
 .counting {
   grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 90% 1fr;
   padding-top: 1.5rem;
 }
 .counting h2 {
+  grid-column: 2/3;
   font-size: 1.5rem;
   color: #3c3c3c;
   text-align: center;
+}
+.counting img {
+  grid-column: 2/3;
+  width: 100%;
+  margin-top: 1.75rem;
+}
+.counting .spending-input {
+  grid-column: 2/3;
+  margin-top: 1.75rem;
+}
+.counting .spending-input .spending-now label,
+.counting .spending-input .spending-pension label {
+  color: #5b5b5b;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.counting .spending-input .spending-now .input,
+.counting .spending-input .spending-pension .input {
+  display: flex;
+  justify-content: space-between;
+}
+.counting .spending-input .spending-now .input input,
+.counting .spending-input .spending-pension .input input {
+  margin-top: 1em;
+  width: 47%;
+  font-size: 0.64rem;
+  padding-block: 0.9em;
+  padding-left: 0.7em;
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  outline: none;
+}
+.counting .spending-input .spending-pension {
+  margin-top: 1.6em;
+}
+.counting .spending-input .inflation {
+  margin-top: 1.6em;
+}
+.counting .spending-input .inflation .input-inflation {
+  display: flex;
+}
+.counting .spending-input .inflation .input-inflation input {
+  width: 15%;
+  border-radius: 1em 0px 0px 1em;
+  border: 1px solid #aaaaaa;
+  outline: none;
+  padding: 0.7em;
+  font-size: 0.64rem;
+}
+.counting .spending-input .inflation .input-inflation .percent {
+  font-size: 0.65rem;
+  padding: 0.7em;
+  color: #f1f1f1;
+  background-color: #aaaaaa;
+  border-radius: 0px 0.8em 0.8em 0px;
+}
+.counting .spending-input .inflation p {
+  font-size: 0.8rem;
+  color: #aaaaaa;
 }
 
 /*# sourceMappingURL=style.css.map */
