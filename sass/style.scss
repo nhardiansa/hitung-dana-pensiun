@@ -120,9 +120,15 @@ svg {
 
     .inflation {
       margin-top: 1.6em;
+      display: flex;
+
+      width: 100%;
 
       .input-inflation {
         display: flex;
+
+        width: 40%;
+        margin-right: 0.5em;
 
         input {
           width: 15%;
@@ -132,20 +138,24 @@ svg {
 
           padding: 0.7em;
           font-size: 0.64rem;
+
+          flex-grow: 10;
         }
 
         .percent {
+          flex-grow: 1;
           font-size: 0.65rem;
           padding: 0.7em;
           color: #f1f1f1;
           background-color: #aaaaaa;
-          border-radius: 0px 0.8em 0.8em 0px;
+          border-radius: 0px 1em 1em 0px;
         }
       }
 
       p {
         font-size: 0.8rem;
         color: #aaaaaa;
+        width: 100%;
       }
     }
   }
