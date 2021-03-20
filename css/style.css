@@ -49,6 +49,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
   padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 .counting h2 {
   grid-column: 2/3;
@@ -121,6 +122,39 @@ svg {
   font-size: 0.8rem;
   color: #aaaaaa;
   width: 100%;
+}
+.counting .spending-input .output {
+  margin-top: 1.5em;
+}
+.counting .spending-input .output .annual-spending,
+.counting .spending-input .output .funds-required {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.counting .spending-input .output .annual-spending p:first-child,
+.counting .spending-input .output .funds-required p:first-child {
+  width: 60%;
+}
+.counting .spending-input .output .annual-spending p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #797979;
+}
+.counting .spending-input .output .annual-spending p.total {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.counting .spending-input .output .funds-required {
+  margin-top: 1.5em;
+}
+.counting .spending-input .output .funds-required p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #545454;
+}
+.counting .spending-input .output .funds-required p.total {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

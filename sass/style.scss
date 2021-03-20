@@ -69,6 +69,7 @@ svg {
   @include gridIt();
 
   padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
 
   h2 {
     @include childGrid();
@@ -156,6 +157,48 @@ svg {
         font-size: 0.8rem;
         color: #aaaaaa;
         width: 100%;
+      }
+    }
+
+    .output {
+      margin-top: 1.5em;
+
+      .annual-spending,
+      .funds-required {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p:first-child {
+          width: 60%;
+        }
+      }
+
+      .annual-spending {
+        p {
+          font-weight: 500;
+          font-size: 0.8rem;
+          color: #797979;
+        }
+
+        p.total {
+          font-weight: bold;
+          font-size: 1rem;
+        }
+      }
+
+      .funds-required {
+        margin-top: 1.5em;
+
+        p {
+          font-weight: 500;
+          font-size: 1rem;
+          color: #545454;
+        }
+
+        p.total {
+          font-size: 1rem;
+        }
       }
     }
   }
