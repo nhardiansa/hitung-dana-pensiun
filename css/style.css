@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+input {
+  color: #474747;
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
@@ -51,19 +55,21 @@ svg {
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
-.counting h2 {
+.counting h2,
+.counting img,
+.counting .spending-input {
   grid-column: 2/3;
+}
+.counting h2 {
   font-size: 1.5rem;
   color: #3c3c3c;
   text-align: center;
 }
 .counting img {
-  grid-column: 2/3;
   width: 100%;
   margin-top: 1.75rem;
 }
 .counting .spending-input {
-  grid-column: 2/3;
   margin-top: 1.75rem;
 }
 .counting .spending-input .spending-now label,
@@ -116,7 +122,7 @@ svg {
   padding: 0.7em;
   color: #f1f1f1;
   background-color: #aaaaaa;
-  border-radius: 0px 1em 1em 0px;
+  border-radius: 0px 0.98em 0.98em 0px;
 }
 .counting .spending-input .inflation p {
   font-size: 0.8rem;
@@ -155,6 +161,67 @@ svg {
 }
 .counting .spending-input .output .funds-required p.total {
   font-size: 1rem;
+  font-weight: 600;
+}
+
+.prepare {
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 90% 1fr;
+  background: #0099ff;
+  color: #ffff;
+  padding-top: 1.5rem;
+}
+.prepare h2,
+.prepare img,
+.prepare p,
+.prepare .input-funds,
+.prepare .funds-prepared {
+  grid-column: 2/3;
+}
+.prepare h2 {
+  text-align: center;
+}
+.prepare img {
+  margin-top: 1.75em;
+  width: 100%;
+}
+.prepare p {
+  margin-top: 2em;
+  width: 76%;
+  font-size: 0.8rem;
+}
+.prepare .input-funds {
+  margin-top: 1.5em;
+}
+.prepare .input-funds .return {
+  display: flex;
+}
+.prepare .input-funds .return input {
+  width: 43%;
+  border-radius: 1em 0 0 1em;
+  border: none;
+  font-size: 0.64rem;
+  padding: 0.7em;
+}
+.prepare .input-funds .return .percent {
+  background-color: #b4b4b4;
+  color: #ffff;
+  font-size: 0.75rem;
+  padding: 0.5em 0.8em;
+  border-radius: 0 0.85em 0.85em 0;
+}
+.prepare .input-funds .already-funds {
+  margin-top: 1em;
+}
+.prepare .input-funds .already-funds input {
+  border-radius: 1em;
+  border: none;
+  font-size: 0.64rem;
+  padding: 0.7em;
+}
+.prepare .funds-prepared {
+  margin-top: 2em;
 }
 
 /*# sourceMappingURL=style.css.map */
