@@ -210,7 +210,7 @@ svg {
   background-color: #b4b4b4;
   color: #ffff;
   font-size: 0.75rem;
-  padding: 0.5em 0.8em;
+  padding: 0.6em 0.7em;
   border-radius: 0 0.85em 0.85em 0;
 }
 .prepare .input-funds .already-funds {
@@ -222,7 +222,7 @@ svg {
   font-size: 0.64rem;
   outline: none;
   padding-block: 0.9em;
-  padding: 0.7em;
+  padding-left: 0.7em;
 }
 .prepare .funds-prepared {
   margin-top: 1.5em;
