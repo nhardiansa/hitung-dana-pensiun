@@ -30,10 +30,17 @@ body {
   @include gridIt();
 }
 
-.header {
+.header,
+.counting,
+.prepare,
+.contact,
+.footer,
+svg {
   @include childGrid(false);
   @include gridIt();
+}
 
+.header {
   background: #0099ff;
   padding-top: 4.125rem;
   padding-bottom: 1.5rem;
@@ -64,14 +71,7 @@ body {
   }
 }
 
-svg {
-  @include childGrid(false);
-}
-
 .counting {
-  @include childGrid(false);
-  @include gridIt();
-
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 
@@ -143,7 +143,8 @@ svg {
           border: 1px solid #aaaaaa;
           outline: none;
 
-          padding: 0.7em;
+          padding-block: 0.9em;
+          padding-left: 0.7em;
           font-size: 0.64rem;
 
           flex-grow: 10;
@@ -212,12 +213,11 @@ svg {
 }
 
 .prepare {
-  @include childGrid(false);
-  @include gridIt();
   background: #0099ff;
   color: #ffff;
 
-  padding-top: 1.5rem;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
 
   h2,
   img,
@@ -253,7 +253,10 @@ svg {
         border-radius: 1em 0 0 1em;
         border: none;
         font-size: 0.64rem;
-        padding: 0.7em;
+
+        outline: none;
+        padding-block: 0.9em;
+        padding-left: 0.7em;
       }
 
       .percent {
@@ -272,12 +275,95 @@ svg {
         border-radius: 1em;
         border: none;
         font-size: 0.64rem;
+
+        outline: none;
+        padding-block: 0.9em;
         padding: 0.7em;
       }
     }
   }
 
   .funds-prepared {
-    margin-top: 2em;
+    margin-top: 1.5em;
+
+    .monthly-investation,
+    .annual-investation {
+      display: grid;
+      align-items: center;
+      justify-content: space-between;
+
+      grid-template-columns: 1.8fr 1fr;
+
+      p:first-child {
+        font-weight: 500;
+        font-size: 0.8rem;
+        grid-column: 1;
+      }
+
+      p.total {
+        grid-column: 2;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contact {
+  h3,
+  .socmed,
+  img {
+    @include childGrid();
+  }
+
+  img {
+    display: none;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #555555;
+  }
+
+  .socmed {
+    margin-top: 0.8em;
+    p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5em;
+      img {
+        display: block;
+        width: 1.5em;
+        margin-right: 0.5em;
+      }
+      a {
+        text-decoration: none;
+        color: #555555;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.footer {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  color: #555555;
+  font-size: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 3em;
+  margin-bottom: 1em;
+
+  img {
+    display: inline-block;
+    margin-inline: 0.25em;
+    width: 1.5em;
   }
 }

@@ -15,10 +15,18 @@ body {
   grid-template-columns: 1fr 90% 1fr;
 }
 
-.header {
+.header,
+.counting,
+.prepare,
+.contact,
+.footer,
+svg {
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr 90% 1fr;
+}
+
+.header {
   background: #0099ff;
   padding-top: 4.125rem;
   padding-bottom: 1.5rem;
@@ -44,14 +52,7 @@ body {
   font-size: 1rem;
 }
 
-svg {
-  grid-column: 1/4;
-}
-
 .counting {
-  grid-column: 1/4;
-  display: grid;
-  grid-template-columns: 1fr 90% 1fr;
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
@@ -112,7 +113,8 @@ svg {
   border-radius: 1em 0px 0px 1em;
   border: 1px solid #aaaaaa;
   outline: none;
-  padding: 0.7em;
+  padding-block: 0.9em;
+  padding-left: 0.7em;
   font-size: 0.64rem;
   flex-grow: 10;
 }
@@ -165,12 +167,10 @@ svg {
 }
 
 .prepare {
-  grid-column: 1/4;
-  display: grid;
-  grid-template-columns: 1fr 90% 1fr;
   background: #0099ff;
   color: #ffff;
-  padding-top: 1.5rem;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
 }
 .prepare h2,
 .prepare img,
@@ -202,7 +202,9 @@ svg {
   border-radius: 1em 0 0 1em;
   border: none;
   font-size: 0.64rem;
-  padding: 0.7em;
+  outline: none;
+  padding-block: 0.9em;
+  padding-left: 0.7em;
 }
 .prepare .input-funds .return .percent {
   background-color: #b4b4b4;
@@ -218,10 +220,82 @@ svg {
   border-radius: 1em;
   border: none;
   font-size: 0.64rem;
+  outline: none;
+  padding-block: 0.9em;
   padding: 0.7em;
 }
 .prepare .funds-prepared {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+.prepare .funds-prepared .monthly-investation,
+.prepare .funds-prepared .annual-investation {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1.8fr 1fr;
+}
+.prepare .funds-prepared .monthly-investation p:first-child,
+.prepare .funds-prepared .annual-investation p:first-child {
+  font-weight: 500;
+  font-size: 0.8rem;
+  grid-column: 1;
+}
+.prepare .funds-prepared .monthly-investation p.total,
+.prepare .funds-prepared .annual-investation p.total {
+  grid-column: 2;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.contact h3,
+.contact .socmed,
+.contact img {
+  grid-column: 2/3;
+}
+.contact img {
+  display: none;
+}
+.contact h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #555555;
+}
+.contact .socmed {
+  margin-top: 0.8em;
+}
+.contact .socmed p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.contact .socmed p img {
+  display: block;
+  width: 1.5em;
+  margin-right: 0.5em;
+}
+.contact .socmed p a {
+  text-decoration: none;
+  color: #555555;
+  font-size: 0.8rem;
+}
+
+.footer {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  color: #555555;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.footer img {
+  display: inline-block;
+  margin-inline: 0.25em;
+  width: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
