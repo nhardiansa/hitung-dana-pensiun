@@ -288,20 +288,17 @@ svg {
 
     .monthly-investation,
     .annual-investation {
-      display: grid;
-      align-items: center;
+      display: flex;
       justify-content: space-between;
-
-      grid-template-columns: 1.8fr 1fr;
 
       p:first-child {
         font-weight: 500;
         font-size: 0.8rem;
-        grid-column: 1;
       }
 
       p.total {
-        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
         font-size: 1rem;
         font-weight: 600;
         width: 100%;
