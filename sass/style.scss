@@ -153,7 +153,8 @@ svg {
         .percent {
           flex-grow: 1;
           font-size: 0.65rem;
-          padding: 0.7em;
+          padding-left: 0.7em;
+          padding-top: 1em;
           color: #f1f1f1;
           background-color: #aaaaaa;
           border-radius: 0px 0.98em 0.98em 0px;
@@ -165,6 +166,15 @@ svg {
         color: #aaaaaa;
         width: 100%;
       }
+    }
+
+    p:nth-child(4) {
+      margin-left: 0.5em;
+      margin-top: 0.5em;
+      color: #747474;
+      font-style: italic;
+      font-size: 0.64rem;
+      font-weight: 500;
     }
 
     .output {
@@ -249,7 +259,7 @@ svg {
       display: flex;
 
       input {
-        width: 43%;
+        width: 40%;
         border-radius: 1em 0 0 1em;
         border: none;
         font-size: 0.64rem;
@@ -266,6 +276,15 @@ svg {
         padding: 0.6em 0.7em;
         border-radius: 0 0.85em 0.85em 0;
       }
+    }
+
+    p {
+      margin-top: 0.5em;
+      margin-left: 0.5em;
+      color: #f3f3f3;
+      font-style: italic;
+      font-size: 0.64rem;
+      font-weight: 500;
     }
 
     .already-funds {
