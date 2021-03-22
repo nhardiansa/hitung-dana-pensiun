@@ -95,6 +95,15 @@ svg {
   border-radius: 1em;
   outline: none;
 }
+.counting .spending-input .spending-now p,
+.counting .spending-input .spending-pension p {
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  color: #747474;
+  font-style: italic;
+  font-size: 0.64rem;
+  font-weight: 500;
+}
 .counting .spending-input .spending-pension {
   margin-top: 1.6em;
 }
