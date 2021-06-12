@@ -64,25 +64,37 @@
           <label for="spending">Jumlah pengeluaran saat ini</label>
           <div class="input">
             <input
-              id="spending"
+              id="annual-spending"
               type="text"
               placeholder="pengeluaran per-tahun"
             />
-            <input type="text" placeholder="pengeluaran per-bulan" />
+            <input
+              id="monthly-spending"
+              type="text"
+              placeholder="pengeluaran per-bulan"
+            />
           </div>
-          <p>Contoh: Rp.100.000.000</p>
+          <p>Contoh: 100000000</p>
         </div>
         <div class="spending-pension">
           <label for="spending">Jumlah pengeluaran saat pensiun</label>
           <div class="input">
-            <input id="spending" type="text" placeholder="umur saat ini" />
-            <input type="text" placeholder="umur saat pensiun" />
+            <input id="age-now" type="text" placeholder="umur saat ini" />
+            <input
+              id="age-pension"
+              type="text"
+              placeholder="umur saat pensiun"
+            />
           </div>
           <p>Contoh: 60 tahun</p>
         </div>
         <div class="inflation">
           <div class="input-inflation">
-            <input type="text" placeholder="opsional" />
+            <input
+              id="inflation-percentage"
+              type="text"
+              placeholder="opsional"
+            />
             <div class="percent">%</div>
           </div>
           <p>*inflasi tahunan</p>
@@ -192,6 +204,9 @@
       </ul>
     </div>
 
+    <script src="js/helper.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/hitung.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
