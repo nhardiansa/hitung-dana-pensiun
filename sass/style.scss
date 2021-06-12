@@ -7,6 +7,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input {
   color: #474747;
 }
@@ -40,8 +44,9 @@ svg {
   @include gridIt();
 }
 
-.close-menu {
-  z-index: 0;
+#close-menu {
+  transition: 200ms ease-in-out;
+  transform: translateY(-2.5em);
   top: 3rem;
   position: fixed;
   background: #0099ff;
@@ -95,6 +100,10 @@ nav {
     cursor: pointer;
   }
 
+  span.close {
+    display: none;
+  }
+
   ul {
     display: none;
   }
@@ -102,7 +111,7 @@ nav {
 
 .header {
   background: #0099ff;
-  padding-top: 7rem;
+  padding-top: 6rem;
   padding-bottom: 1.5rem;
 
   img {
@@ -132,7 +141,7 @@ nav {
 }
 
 .counting {
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 2.5rem;
 
   h2,
@@ -295,7 +304,7 @@ nav {
   background: #0099ff;
   color: #ffff;
 
-  padding-top: 1.5em;
+  padding-top: 3.5em;
   padding-bottom: 2em;
 
   h2,

@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input {
   color: #474747;
 }
@@ -26,8 +30,9 @@ svg {
   grid-template-columns: 1fr 90% 1fr;
 }
 
-.close-menu {
-  z-index: 0;
+#close-menu {
+  transition: 200ms ease-in-out;
+  transform: translateY(-2.5em);
   top: 3rem;
   position: fixed;
   background: #0099ff;
@@ -35,20 +40,20 @@ svg {
   height: 5vh;
   padding-top: 0.25em;
 }
-.close-menu ul {
+#close-menu ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
 }
-.close-menu ul li a {
+#close-menu ul li a {
   color: #ffff;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: 150ms ease-in;
 }
-.close-menu ul li a:hover {
+#close-menu ul li a:hover {
   color: #dddddd;
 }
 
@@ -75,13 +80,16 @@ nav span {
   font-size: 2rem !important;
   cursor: pointer;
 }
+nav span.close {
+  display: none;
+}
 nav ul {
   display: none;
 }
 
 .header {
   background: #0099ff;
-  padding-top: 7rem;
+  padding-top: 6rem;
   padding-bottom: 1.5rem;
 }
 .header img {
@@ -106,7 +114,7 @@ nav ul {
 }
 
 .counting {
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 2.5rem;
 }
 .counting h2,
@@ -240,7 +248,7 @@ nav ul {
 .prepare {
   background: #0099ff;
   color: #ffff;
-  padding-top: 1.5em;
+  padding-top: 3.5em;
   padding-bottom: 2em;
 }
 .prepare h2,

@@ -1,20 +1,26 @@
-// input pengeluaran
-const pengeluaranTahun = document.querySelector("#spending")
-const pengeluaranBulan = document.querySelector(".spending-now .input input:nth-child(2)")
+const menuIcon = document.querySelector("span.menu");
+const closeIcon = document.querySelector("span.close");
+const menuBar = document.getElementById("close-menu")
 
-function getValue(e){
-    let num = e.target.value
-                .toLowerCase()
-                .split(".")
-                .filter((word) => !isNaN(word))
-                .join("")
+const linkMenu = menuBar.querySelectorAll("li")
+
+linkMenu.forEach(e => {
+    e.addEventListener("click", (e) => {
+        menuBar.style.transform = "translateY(-2.5em)"
+        closeIcon.style.display = "none"
+        menuIcon.style.display = "block"
+    })
+});
+
+menuIcon.addEventListener("click", () => {
+    menuIcon.style.display = "none"
+    closeIcon.style.display = "block"
+    menuBar.style.transform = "translateY(0)"
     
+})
 
-    // num = num.split(".")
-    // num = num.
-    
-    console.log(parseInt(num))
-    // console.log(num)
-}
-
-pengeluaranTahun.addEventListener("change", getValue)
+closeIcon.addEventListener("click", () => {
+    menuBar.style.transform = "translateY(-2.5em)"
+    closeIcon.style.display = "none"
+    menuIcon.style.display = "block"
+})
