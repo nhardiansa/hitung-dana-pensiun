@@ -24,3 +24,5 @@ closeIcon.addEventListener("click", () => {
     closeIcon.style.display = "none"
     menuIcon.style.display = "block"
 })
+
+// window.addEventListener('load',)

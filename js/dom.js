@@ -1,17 +1,17 @@
-const annualOutcomeInput = document.getElementById('annual-spending')
-const monthlyOutcomeInput = document.getElementById('monthly-spending')
+let annualOutcomeInput = document.getElementById('annual-spending')
+let monthlyOutcomeInput = document.getElementById('monthly-spending')
 
 const ageNowInput = document.getElementById('age-now')
 const agePensionInput = document.getElementById('age-pension')
 
 const inflationInput = document.getElementById('inflation-percentage')
 
-const annualOutcomePensionInput = document.querySelector(".annual-spending p.total")
-const needPensionFundsInput = document.querySelector(".funds-required p.total")
+const annualOutcomePension = document.querySelector(".annual-spending p.total")
+const needPensionFunds = document.querySelector(".funds-required p.total")
 
 // FILTERED INPUT
-const INPUT = [
-  annualOutcomeInput, monthlyOutcomeInput, ageNowInput, agePensionInput, inflationInput, annualOutcomePensionInput, needPensionFundsInput
+let INPUT = [
+  annualOutcomeInput, monthlyOutcomeInput, ageNowInput, agePensionInput, inflationInput
 ]
 
 INPUT.forEach(e => {
