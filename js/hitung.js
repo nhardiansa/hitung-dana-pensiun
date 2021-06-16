@@ -1,9 +1,17 @@
 annualOutcomeInput.addEventListener('keyup', function(){
-  monthlyOutcomeInput.value = Math.round(this.value / 12)
+  if (annualOutcomeInput.value === "") {
+    monthlyOutcomeInput.value = ""
+  } else {
+    monthlyOutcomeInput.value = Math.round(this.value / 12)
+  }
 })
 
 monthlyOutcomeInput.addEventListener('keyup', function(){
-  annualOutcomeInput.value = Math.round(this.value * 12)
+  if(monthlyOutcomeInput.value === ""){
+    annualOutcomeInput.value = ""
+  } else {
+    annualOutcomeInput.value = Math.round(this.value * 12)
+  }
 })
 
 INPUT.forEach(e => {
