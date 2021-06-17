@@ -14,5 +14,7 @@ bagian ini menghitung kira-kira sewajarnya kita harus mempersiapkan investasi ya
 2. SASS
 3. Vanilla Javascript
 
+- Live demo nya bisa ke [sini](https://hitung-pensiunan.netlify.app/)
+
 *Juga terdapat potongan kode pada file helper.js yang saya dapatkan dari
 [emkey08](https://jsfiddle.net/emkey08/zgvtjc51) yang berfungsi agar input yang dimasukan oleh user hanya bisa menampung type data number
