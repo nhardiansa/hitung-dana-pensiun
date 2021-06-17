@@ -28,3 +28,8 @@ function stringDoting(integer){
   }
   return string.join('')
 }
+
+function filteringInput(string){
+  let result = string.split('').map(e => parseInt(e)).filter(e => !isNaN(e)).join('')
+  return parseInt(result)
+}

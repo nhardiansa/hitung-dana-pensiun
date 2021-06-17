@@ -26,9 +26,9 @@ INPUT.forEach(e => {
     const total = countAnnualOutcomePension(annualOutcomeInput.value, ageNowInput, agePensionInput, inflationInput)
 
     const totalAnnual = stringDoting(total.annualOut)
-    console.log(totalAnnual)
+    // console.log(totalAnnual)
     const totalNeed = stringDoting(total.needFunds)
-    console.log(totalNeed)
+    // console.log(totalNeed)
 
     if(isNaN(total.annualOut)){
       annualOutcomePension.innerText = 'Rp. 0'

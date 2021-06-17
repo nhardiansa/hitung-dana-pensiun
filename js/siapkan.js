@@ -19,18 +19,19 @@ INPUT.forEach(e => {
     const rateOfPeriod = parseInt(annualReturnInput.value)
     const numOfPay = agePensionInput.value - ageNowInput.value
     const presentValue = parseInt(alreadyFundPensionInput.value)
-    const futureValue = parseInt(needPensionFunds.innerText.replace('Rp. ','').replace('.',''))
+    const futureValue = filteringInput(needPensionFunds.innerText)
     // console.log(rateOfPeriod,numOfPay,presentValue,futureValue*-1)
 
-    const result = pmt(rateOfPeriod/100, numOfPay, presentValue, futureValue*-1, 0)
+    // console.log(futureValue)
+    const result = pmt(rateOfPeriod/100, numOfPay, presentValue, -futureValue, 0)
     const resultMonthly = result / 12
     
     if(isNaN(result)){
       monthlyInvestedYear.innerText = 'Rp. 0'
       annualInvestedYear.innerText = 'Rp. 0'
     } else {
-      monthlyInvestedYear.innerText = 'Rp. ' + Math.round(result)
-      annualInvestedYear.innerText = 'Rp. ' + Math.round(resultMonthly)
+      monthlyInvestedYear.innerText = 'Rp. ' + stringDoting(Math.round(resultMonthly))
+      annualInvestedYear.innerText = 'Rp. ' + stringDoting(Math.round(result))
     }
     
   })
