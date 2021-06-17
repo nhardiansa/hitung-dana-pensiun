@@ -16,3 +16,15 @@ function setInputFilter(textbox, inputFilter) {
     });
   });
 }
+
+function stringDoting(integer){
+  let string = integer.toString().split('')
+  
+  let i = 3
+  while(i < string.length){
+    string.splice(-i, 0, '.')
+    i += 4
+  
+  }
+  return string.join('')
+}

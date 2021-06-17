@@ -1,5 +1,40 @@
+if (annualOutcomePension.innerText == 'Rp.0'){
+  annualReturnInput.disabled = true
+  alreadyFundPensionInput.disabled = true
+} else{
+  annualReturnInput.disabled = false
+  alreadyFundPensionInput.disabled = false
+}
 
+INPUT.forEach(e => {
+  e.addEventListener('keyup', function(){
+    if (annualOutcomePension.innerText == 'Rp.0'){
+      annualReturnInput.disabled = true
+      alreadyFundPensionInput.disabled = true
+    } else{
+      annualReturnInput.disabled = false
+      alreadyFundPensionInput.disabled = false
+    }
 
+    const rateOfPeriod = parseInt(annualReturnInput.value)
+    const numOfPay = agePensionInput.value - ageNowInput.value
+    const presentValue = parseInt(alreadyFundPensionInput.value)
+    const futureValue = parseInt(needPensionFunds.innerText.replace('Rp. ','').replace('.',''))
+    // console.log(rateOfPeriod,numOfPay,presentValue,futureValue*-1)
+
+    const result = pmt(rateOfPeriod/100, numOfPay, presentValue, futureValue*-1, 0)
+    const resultMonthly = result / 12
+    
+    if(isNaN(result)){
+      monthlyInvestedYear.innerText = 'Rp. 0'
+      annualInvestedYear.innerText = 'Rp. 0'
+    } else {
+      monthlyInvestedYear.innerText = 'Rp. ' + Math.round(result)
+      annualInvestedYear.innerText = 'Rp. ' + Math.round(resultMonthly)
+    }
+    
+  })
+})
 
 
 function pmt(rate_per_period, number_of_payments, present_value, future_value, type){

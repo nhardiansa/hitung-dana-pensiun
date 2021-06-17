@@ -24,9 +24,14 @@ const annualInvestedYear = document.querySelector(".funds-prepared > .annual-inv
 
 
 // FILTERED INPUT
-let INPUT = [
-  annualOutcomeInput, monthlyOutcomeInput, ageNowInput, agePensionInput, inflationInput, monthlyInvestedYear, annualInvestedYear
+const INPUT = [
+  annualOutcomeInput, monthlyOutcomeInput, ageNowInput, agePensionInput, inflationInput, annualReturnInput, alreadyFundPensionInput
 ]
+
+// const INPUT = {
+//   input: [annualOutcomeInput, monthlyOutcomeInput, ageNowInput, agePensionInput,inflationInput, annualReturnInput, alreadyFundPensionInput],
+//   event : ['load',]
+// }
 
 INPUT.forEach(e => {
   setInputFilter(e, function(value) {
