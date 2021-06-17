@@ -1,8 +1,8 @@
 annualOutcomeInput.addEventListener('keyup', function(){
   if (annualOutcomeInput.value === "") {
     monthlyOutcomeInput.value = ""
-  } else {
-    monthlyOutcomeInput.value = Math.round(this.value / 12)
+  } else {this.value = stringDoting(this.value)
+    monthlyOutcomeInput.value = stringDoting(Math.round(filteringInput(this.value) / 12))
   }
 })
 
@@ -10,25 +10,22 @@ monthlyOutcomeInput.addEventListener('keyup', function(){
   if(monthlyOutcomeInput.value === ""){
     annualOutcomeInput.value = ""
   } else {
-    annualOutcomeInput.value = Math.round(this.value * 12)
+    this.value = stringDoting(this.value)
+    annualOutcomeInput.value = stringDoting(Math.round(filteringInput(this.value) * 12))
   }
 })
 
 INPUT.forEach(e => {
   e.addEventListener('keyup', function(e){
-    const ageNowInput = parseInt(document.getElementById('age-now').value)
-    const agePensionInput = parseInt(document.getElementById('age-pension').value)
-    const inflationInput = parseInt(document.getElementById('inflation-percentage').value)
+    
+    const ageNow = ageNowInput.value
+    const agePension = agePensionInput.value
+    const inflation = parseInt(inflationInput.value)
 
-    const annualOutcomePension = document.querySelector(".annual-spending p.total")
-    const needPensionFunds = document.querySelector(".funds-required p.total")
-
-    const total = countAnnualOutcomePension(annualOutcomeInput.value, ageNowInput, agePensionInput, inflationInput)
+    const total = countAnnualOutcomePension(filteringInput(annualOutcomeInput.value), ageNow, agePension, inflation)
 
     const totalAnnual = stringDoting(total.annualOut)
-    // console.log(totalAnnual)
     const totalNeed = stringDoting(total.needFunds)
-    // console.log(totalNeed)
 
     if(isNaN(total.annualOut)){
       annualOutcomePension.innerText = 'Rp. 0'
