@@ -38,3 +38,9 @@ INPUT.forEach(e => {
     return /^-?\d*$/.test(value);
   });
 });
+
+INPUT.forEach( e => {
+  e.addEventListener('click', function() {
+    this.value = stringDoting(this.value)
+  })
+} )

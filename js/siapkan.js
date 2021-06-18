@@ -16,9 +16,13 @@ INPUT.forEach(e => {
       alreadyFundPensionInput.disabled = false
     }
 
+    if(alreadyFundPensionInput.value !== "") {
+      alreadyFundPensionInput.value = stringDoting(filteringInput(alreadyFundPensionInput.value))
+    }
+
     const rateOfPeriod = parseInt(annualReturnInput.value)
     const numOfPay = agePensionInput.value - ageNowInput.value
-    const presentValue = parseInt(alreadyFundPensionInput.value)
+    const presentValue = parseInt(filteringInput(alreadyFundPensionInput.value))
     const futureValue = filteringInput(needPensionFunds.innerText)
     // console.log(rateOfPeriod,numOfPay,presentValue,futureValue*-1)
 
