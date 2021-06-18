@@ -17,6 +17,7 @@ function setInputFilter(textbox, inputFilter) {
   });
 }
 
+// memberikan titik pada setiap 3 digit terakhir
 function stringDoting(integer){
   let string = integer.toString().split('')
   
@@ -29,6 +30,7 @@ function stringDoting(integer){
   return string.join('')
 }
 
+// membersihkan yang bukan termasuk type data number
 function filteringInput(string){
   let result = string.split('').map(e => parseInt(e)).filter(e => !isNaN(e)).join('')
   return parseInt(result)
